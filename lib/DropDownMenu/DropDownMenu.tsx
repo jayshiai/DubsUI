@@ -22,7 +22,9 @@ interface DropdownMenuProps {
 
 const DropdownMenu = ({ className, items, trigger = "Menu", ...props }: DropdownMenuProps) => {
     return (
-        <DropdownMenuRoot>
+        <DropdownMenuRoot
+            {...props}
+        >
             <DropdownMenuTrigger asChild>
                 {typeof trigger == "string" ? <button className="flex items-center">{trigger}</button> : trigger}
             </DropdownMenuTrigger>

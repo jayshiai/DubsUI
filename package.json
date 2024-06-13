@@ -2,7 +2,7 @@
   "name": "@jayshiai/dubsui",
   "author": "jayshiai",
   "private": false,
-  "version": "0.1.2a",
+  "version": "0.2.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

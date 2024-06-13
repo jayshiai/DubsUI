@@ -32,7 +32,7 @@ const Breadcrumb = React.forwardRef<
     BreadcrumbProps
 >(
     ({ className, items, linkComponent: LinkComponent, separator, ...props }, ref) => {
-        const renderBreadcrumbItems = (items: BreadcrumbItem[], isParent = false) => {
+        const renderBreadcrumbItems = (items: BreadcrumbItem[]) => {
             return items.map((item, index) => {
                 const isCurrent = index === items.length - 1;
                 const hasChildren = item.items && item.items.length > 0;

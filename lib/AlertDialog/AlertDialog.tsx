@@ -29,6 +29,7 @@ const AlertDialog = React.forwardRef<
     ({ className, trigger = "Show Dialog", dialogTitle, dialogDescription, cancelText = "Cancel", actionText = "Confirm", cancelVariant, actionVariant, buttonSize, ...props }, ref) => {
         return (
             <AlertDialogRoot
+                {...props}
             >
                 <AlertDialogTrigger
                     ref={ref}
