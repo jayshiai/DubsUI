@@ -1,0 +1,1 @@
+export { ScrollAreaRoot, ScrollBar } from "./ScrollArea"
