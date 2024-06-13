@@ -1,4 +1,5 @@
 export {
+    AlertDialog,
     AlertDialogRoot,
     AlertDialogPortal,
     AlertDialogOverlay,

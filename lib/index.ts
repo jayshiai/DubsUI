@@ -1,10 +1,11 @@
 import "./index.css";
 
 //Accordian
-export { AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from "./Accordion";
+export { Accordion, AccordionRoot, AccordionItem, AccordionTrigger, AccordionContent } from "./Accordion";
 
 //Alert Dialog
 export {
+    AlertDialog,
     AlertDialogRoot,
     AlertDialogPortal,
     AlertDialogOverlay,
@@ -23,6 +24,8 @@ export { Avatar, AvatarRoot, AvatarImage, AvatarFallback } from "./Avatar"
 
 //Breadcrumb
 export {
+    Breadcrumb,
+    type BreadcrumbItemType,
     BreadcrumbRoot,
     BreadcrumbList,
     BreadcrumbItem,
@@ -43,6 +46,8 @@ export { CollapsibleRoot, CollapsibleTrigger, CollapsibleContent } from "./Colla
 
 //ContextMenu
 export {
+    ContextMenu,
+    type ContextMenuItemType,
     ContextMenuRoot,
     ContextMenuTrigger,
     ContextMenuContent,
@@ -76,6 +81,8 @@ export {
 
 //DropDownMenu
 export {
+    DropdownMenu,
+    type DropdownMenuItemType,
     DropdownMenuRoot,
     DropdownMenuTrigger,
     DropdownMenuContent,
@@ -94,10 +101,13 @@ export {
 } from "./DropDownMenu"
 
 //HoverCard
-export { HoverCardRoot, HoverCardTrigger, HoverCardContent } from "./HoverCard"
+export { HoverCard, HoverCardTrigger, HoverCardContent } from "./HoverCard"
 
 //MenuBar
 export {
+    Menubar,
+    type MenubarItemType,
+    type MenubarTriggerProps,
     MenubarRoot,
     MenubarMenu,
     MenubarTrigger,

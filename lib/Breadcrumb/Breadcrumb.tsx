@@ -5,15 +5,15 @@ import { ChevronRightIcon, ChevronDownIcon, DotsHorizontalIcon } from "@radix-ui
 
 import { cn } from "@/lib/utils"
 import { DropdownMenu } from "../DropDownMenu/DropDownMenu";
-interface BreadcrumbItem {
+interface BreadcrumbItemType {
     label: string;
     href?: string;
-    items?: BreadcrumbItem[];
+    items?: BreadcrumbItemType[];
 }
 
 interface BreadcrumbProps {
     className?: string;
-    items: BreadcrumbItem[];
+    items: BreadcrumbItemType[];
     linkComponent?: React.ElementType;
     separator?: React.ReactNode;
 }
@@ -32,7 +32,7 @@ const Breadcrumb = React.forwardRef<
     BreadcrumbProps
 >(
     ({ className, items, linkComponent: LinkComponent, separator, ...props }, ref) => {
-        const renderBreadcrumbItems = (items: BreadcrumbItem[]) => {
+        const renderBreadcrumbItems = (items: BreadcrumbItemType[]) => {
             return items.map((item, index) => {
                 const isCurrent = index === items.length - 1;
                 const hasChildren = item.items && item.items.length > 0;
@@ -73,7 +73,7 @@ const Breadcrumb = React.forwardRef<
                 );
             });
         };
-        const mapBreadcrumbToDropdownItem = (item: BreadcrumbItem): DropdownMenuItem => ({
+        const mapBreadcrumbToDropdownItem = (item: BreadcrumbItemType): DropdownMenuItem => ({
             label: item.label,
             href: item.href,
             items: item.items ? item.items.map(mapBreadcrumbToDropdownItem) : undefined
@@ -191,6 +191,7 @@ BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
 
 export {
     Breadcrumb,
+    type BreadcrumbItemType,
     BreadcrumbRoot,
     BreadcrumbList,
     BreadcrumbItem,

@@ -1,5 +1,7 @@
 
 export {
+    DropdownMenu,
+    type DropdownMenuItemType,
     DropdownMenuRoot,
     DropdownMenuTrigger,
     DropdownMenuContent,

@@ -1,4 +1,6 @@
 export {
+    ContextMenu,
+    type ContextMenuItemType,
     ContextMenuRoot,
     ContextMenuTrigger,
     ContextMenuContent,

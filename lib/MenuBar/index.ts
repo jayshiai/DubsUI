@@ -1,4 +1,7 @@
 export {
+    Menubar,
+    type MenubarItemType,
+    type MenubarTriggerProps,
     MenubarRoot,
     MenubarMenu,
     MenubarTrigger,

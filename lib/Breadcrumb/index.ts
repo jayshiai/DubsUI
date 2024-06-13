@@ -1,4 +1,6 @@
 export {
+    Breadcrumb,
+    type BreadcrumbItemType,
     BreadcrumbRoot,
     BreadcrumbList,
     BreadcrumbItem,
