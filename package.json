@@ -2,7 +2,7 @@
   "name": "@jayshiai/dubsui",
   "author": "jayshiai",
   "private": false,
-  "version": "0.2.1b",
+  "version": "0.3.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -99,6 +99,10 @@
     "vite-tsconfig-paths": "^4.3.2"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "postcss-prefix-selector": "^1.16.1"
   }
 }
