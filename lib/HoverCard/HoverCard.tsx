@@ -4,7 +4,25 @@ import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 
 import { cn } from "@/lib/utils";
 
-const HoverCard = HoverCardPrimitive.Root;
+interface HoverCardProps {
+  trigger: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+}
+const HoverCard = ({ trigger, children, className }: HoverCardProps) => {
+  return (
+    <HoverCardRoot>
+      {typeof trigger === "string" ? (
+        <HoverCardTrigger>{trigger}</HoverCardTrigger>
+      ) : (
+        <HoverCardTrigger asChild>{trigger}</HoverCardTrigger>
+      )}
+      <HoverCardContent className={className}>{children}</HoverCardContent>
+    </HoverCardRoot>
+  );
+};
+
+const HoverCardRoot = HoverCardPrimitive.Root;
 
 const HoverCardTrigger = HoverCardPrimitive.Trigger;
 
@@ -25,4 +43,4 @@ const HoverCardContent = React.forwardRef<
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 
-export { HoverCard, HoverCardTrigger, HoverCardContent };
+export { HoverCard, HoverCardRoot, HoverCardTrigger, HoverCardContent };

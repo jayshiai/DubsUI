@@ -1,59 +1,68 @@
 import {
-    CollapsibleRoot,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from "./Collapsible"
-import React from "react"
-import { ChevronsUpDown } from "lucide-react"
-import { Button } from "../Button/Button"
-export default { title: 'DubsUI/Collapsible' };
-
+  CollapsibleRoot,
+  CollapsibleContent,
+  CollapsibleTrigger,
+  Collapsible,
+} from "./Collapsible";
+import React from "react";
+import { ChevronsUpDown } from "lucide-react";
+import { Button } from "../Button/Button";
+export default { title: "DubsUI/Collapsible" };
 
 export const Primary = () => {
-    return (
-        <CollapsibleRoot>
-            <CollapsibleTrigger>Collapsible Title</CollapsibleTrigger>
-            <CollapsibleContent>
-                This is its Content
-            </CollapsibleContent>
-        </CollapsibleRoot>
-    )
-}
-
+  const title = (
+    <div className="w-full h-10 bg-black text-white rounded-2xl flex justify-center items-center">
+      Collapsible
+    </div>
+  );
+  return (
+    <Collapsible title={title} show={2}>
+      <div className="rounded-md border px-4 py-3 font-mono text-sm">
+        @radix-ui/primitives
+      </div>
+      <div className="rounded-md border px-4 py-3 font-mono text-sm">
+        @radix-ui/colors
+      </div>
+      <div className="rounded-md border px-4 py-3 font-mono text-sm">
+        @stitches/react
+      </div>
+    </Collapsible>
+  );
+};
 
 export const Fancy = () => {
-    const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
-    return (
-        <div className="dark  bg-black h-[calc(100vh-2rem)]   flex justify-center items-center">
-            <CollapsibleRoot
-                open={isOpen}
-                onOpenChange={setIsOpen}
-                className="w-[350px] space-y-2 dark:text-white"
-            >
-                <div className="flex items-center justify-between space-x-4 px-4">
-                    <h4 className="text-sm font-semibold">
-                        @peduarte starred 3 repositories
-                    </h4>
-                    <CollapsibleTrigger asChild>
-                        <Button variant="ghost" size="sm" className="w-9 p-0">
-                            <ChevronsUpDown className="h-4 w-4" />
-                            <span className="sr-only">Toggle</span>
-                        </Button>
-                    </CollapsibleTrigger>
-                </div>
-                <div className="rounded-md border px-4 py-3 font-mono text-sm">
-                    @radix-ui/primitives
-                </div>
-                <CollapsibleContent className="space-y-2">
-                    <div className="rounded-md border px-4 py-3 font-mono text-sm">
-                        @radix-ui/colors
-                    </div>
-                    <div className="rounded-md border px-4 py-3 font-mono text-sm">
-                        @stitches/react
-                    </div>
-                </CollapsibleContent>
-            </CollapsibleRoot>
+  return (
+    <div className="dark  bg-black h-[calc(100vh-2rem)]   flex justify-center items-center">
+      <CollapsibleRoot
+        open={isOpen}
+        onOpenChange={setIsOpen}
+        className="w-[350px] space-y-2 dark:text-white"
+      >
+        <div className="flex items-center justify-between space-x-4 px-4">
+          <h4 className="text-sm font-semibold">
+            @peduarte starred 3 repositories
+          </h4>
+          <CollapsibleTrigger asChild>
+            <Button variant="ghost" size="sm" className="w-9 p-0">
+              <ChevronsUpDown className="h-4 w-4" />
+              <span className="sr-only">Toggle</span>
+            </Button>
+          </CollapsibleTrigger>
         </div>
-    )
-}
+        <div className="rounded-md border px-4 py-3 font-mono text-sm">
+          @radix-ui/primitives
+        </div>
+        <CollapsibleContent className="space-y-2">
+          <div className="rounded-md border px-4 py-3 font-mono text-sm">
+            @radix-ui/colors
+          </div>
+          <div className="rounded-md border px-4 py-3 font-mono text-sm">
+            @stitches/react
+          </div>
+        </CollapsibleContent>
+      </CollapsibleRoot>
+    </div>
+  );
+};

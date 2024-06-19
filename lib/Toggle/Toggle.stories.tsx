@@ -1,14 +1,9 @@
 import {
-    ToggleRoot
-    // , toggleVariants 
-} from "./Toggle"
-export default { title: 'DubsUI/Toggle' };
-
+  Toggle,
+  // , toggleVariants
+} from "./Toggle";
+export default { title: "DubsUI/Toggle" };
 
 export const Primary = () => {
-    return (
-        <ToggleRoot>
-            Toggle
-        </ToggleRoot>
-    )
-}
+  return <Toggle>Toggle</Toggle>;
+};

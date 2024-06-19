@@ -1,12 +1,12 @@
 import {
-  ScrollAreaRoot,
+  ScrollArea,
   // , ScrollBar
 } from "./ScrollArea";
 export default { title: "DubsUI/ScrollArea" };
 
 export const Primary = () => {
   return (
-    <ScrollAreaRoot className="h-[200px] w-[350px] rounded-md border p-4">
+    <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
       Jokester began sneaking into the castle in the middle of the night and
       leaving jokes all over the place: under the king's pillow, in his soup,
       even in the royal toilet. The king was furious, but he couldn't seem to
@@ -31,6 +31,6 @@ export const Primary = () => {
       kingdom discovered that the jokes left by Jokester were so funny that they
       couldn't help but laugh. And once they started laughing, they couldn't
       stop.
-    </ScrollAreaRoot>
+    </ScrollArea>
   );
 };

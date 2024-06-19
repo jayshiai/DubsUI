@@ -6,6 +6,33 @@ import { VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { toggleVariants } from "../Toggle";
 
+interface ToggleGroupProps {
+  type: "single" | "multiple";
+  children: React.ReactNode;
+}
+const ToggleGroup = ({ type, children, ...props }: ToggleGroupProps) => {
+  // Ensure that children are of type ReactElement and have a value prop
+  const toggleItems = React.Children.map(children, (child) => {
+    if (typeof child === "string") {
+      return <ToggleGroupItem value={child}>{child}</ToggleGroupItem>;
+    } else if (React.isValidElement(child)) {
+      const { value } = child.props;
+      return (
+        <ToggleGroupItem value={value} asChild>
+          {child}
+        </ToggleGroupItem>
+      );
+    }
+    return null;
+  });
+
+  return (
+    <ToggleGroupRoot type={type} {...props}>
+      {toggleItems}
+    </ToggleGroupRoot>
+  );
+};
+
 const ToggleGroupContext = React.createContext<
   VariantProps<typeof toggleVariants>
 >({
@@ -57,4 +84,4 @@ const ToggleGroupItem = React.forwardRef<
 
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
 
-export { ToggleGroupRoot, ToggleGroupItem };
+export { ToggleGroup, ToggleGroupRoot, ToggleGroupItem };

@@ -4,6 +4,24 @@ import * as PopoverPrimitive from "@radix-ui/react-popover";
 
 import { cn } from "@/lib/utils";
 
+interface PopoverProps {
+  trigger: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Popover = ({ trigger, children, className }: PopoverProps) => {
+  return (
+    <PopoverRoot>
+      {typeof trigger === "string" ? (
+        <PopoverTrigger>{trigger}</PopoverTrigger>
+      ) : (
+        <PopoverTrigger asChild>{trigger}</PopoverTrigger>
+      )}
+      <PopoverContent className={className}>{children}</PopoverContent>
+    </PopoverRoot>
+  );
+};
 const PopoverRoot = PopoverPrimitive.Root;
 
 const PopoverTrigger = PopoverPrimitive.Trigger;
@@ -27,4 +45,4 @@ const PopoverContent = React.forwardRef<
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
-export { PopoverRoot, PopoverTrigger, PopoverContent };
+export { Popover, PopoverRoot, PopoverTrigger, PopoverContent };

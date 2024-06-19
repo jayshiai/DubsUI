@@ -5,6 +5,27 @@ import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
+interface DialogProps {
+  trigger: React.ReactNode;
+  title?: string;
+  description?: string;
+  children?: React.ReactNode;
+}
+const Dialog = ({ trigger, title, description, children }: DialogProps) => {
+  return (
+    <DialogRoot>
+      <DialogTrigger>{trigger}</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+          <DialogDescription>{description}</DialogDescription>
+        </DialogHeader>
+        {children}
+      </DialogContent>
+    </DialogRoot>
+  );
+};
+
 const DialogRoot = DialogPrimitive.Root;
 
 const DialogTrigger = DialogPrimitive.Trigger;
@@ -108,6 +129,7 @@ const DialogDescription = React.forwardRef<
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 
 export {
+  Dialog,
   DialogRoot,
   DialogPortal,
   DialogOverlay,

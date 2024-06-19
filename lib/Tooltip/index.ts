@@ -1,1 +1,1 @@
-export { TooltipRoot, TooltipTrigger, TooltipContent, TooltipProvider } from "./Tooltip"
+export { Tooltip,TooltipRoot, TooltipTrigger, TooltipContent, TooltipProvider } from "./Tooltip"

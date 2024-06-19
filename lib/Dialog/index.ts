@@ -1,4 +1,5 @@
 export {
+    Dialog,
     DialogRoot,
     DialogPortal,
     DialogOverlay,

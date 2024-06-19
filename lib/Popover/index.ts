@@ -1,2 +1,2 @@
 
-export { PopoverRoot, PopoverTrigger, PopoverContent } from "./Popover"
+export {Popover, PopoverRoot, PopoverTrigger, PopoverContent } from "./Popover"

@@ -8,13 +8,15 @@ import { type VariantProps } from "class-variance-authority";
 
 interface AlertDialogProps {
   className?: string;
-  cancelVariant?: VariantProps<typeof buttonVariants>["variant"];
-  actionVariant?: VariantProps<typeof buttonVariants>["variant"];
-  buttonSize?: VariantProps<typeof buttonVariants>["size"];
+  cancelVariant?: VariantProps<typeof buttonVariants>["variant"]; // "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined
+  actionVariant?: VariantProps<typeof buttonVariants>["variant"]; // "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
+  buttonSize?: VariantProps<typeof buttonVariants>["size"]; // "default" | "sm" | "lg" | "icon" | null | undefined
   dialogTitle?: string;
   dialogDescription?: string;
   cancelText?: string;
   actionText?: string;
+  onCancle?: () => void;
+  onAction?: () => void;
   trigger?: React.ReactNode;
 }
 
@@ -40,6 +42,8 @@ const AlertDialog = React.forwardRef<
       cancelVariant,
       actionVariant,
       buttonSize,
+      onAction,
+      onCancle,
       ...props
     },
     ref
@@ -63,10 +67,18 @@ const AlertDialog = React.forwardRef<
             <AlertDialogDescription>{dialogDescription}</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel variant={cancelVariant} size={buttonSize}>
+            <AlertDialogCancel
+              onClick={onCancle}
+              variant={cancelVariant}
+              size={buttonSize}
+            >
               {cancelText}
             </AlertDialogCancel>
-            <AlertDialogAction variant={actionVariant} size={buttonSize}>
+            <AlertDialogAction
+              onClick={onAction}
+              variant={actionVariant}
+              size={buttonSize}
+            >
               {actionText}
             </AlertDialogAction>
           </AlertDialogFooter>

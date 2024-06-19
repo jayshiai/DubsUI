@@ -42,7 +42,7 @@ export { Button, buttonVariants } from "./Button";
 export { CardRoot, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./Card"
 
 //Collapsible
-export { CollapsibleRoot, CollapsibleTrigger, CollapsibleContent } from "./Collapsible"
+export { Collapsible, CollapsibleRoot, CollapsibleTrigger, CollapsibleContent } from "./Collapsible"
 
 //ContextMenu
 export {
@@ -67,6 +67,7 @@ export {
 
 //Dialog
 export {
+    Dialog,
     DialogRoot,
     DialogPortal,
     DialogOverlay,
@@ -140,13 +141,13 @@ export {
 } from "./NavigationMenu"
 
 //Popover
-export { PopoverRoot, PopoverTrigger, PopoverContent } from "./Popover"
+export { Popover, PopoverRoot, PopoverTrigger, PopoverContent } from "./Popover"
 
 //Progress
 export { Progress } from "./Progress"
 
 //ScrollArea
-export { ScrollAreaRoot, ScrollBar } from "./ScrollArea"
+export { ScrollArea, ScrollBar } from "./ScrollArea"
 
 //Select
 export {
@@ -190,13 +191,13 @@ export {
 } from "./Toast"
 
 //Toggle
-export { ToggleRoot, toggleVariants } from "./Toggle"
+export { Toggle, toggleVariants } from "./Toggle"
 
 //ToggleGroup
-export { ToggleGroupRoot, ToggleGroupItem } from "./ToggleGroup"
+export { ToggleGroup,ToggleGroupRoot, ToggleGroupItem } from "./ToggleGroup"
 
 //Tooltip
-export { TooltipRoot, TooltipTrigger, TooltipContent, TooltipProvider } from "./Tooltip"
+export { Tooltip, TooltipRoot, TooltipTrigger, TooltipContent, TooltipProvider } from "./Tooltip"
 
 //@ts-ignore
 export { SpringLoader } from './Loaders'
