@@ -4,6 +4,66 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+interface SelectItem {
+  value?: string;
+  label: string;
+  items?: SelectItem[];
+  disabled?: boolean;
+}
+
+interface SelectProps extends SelectPrimitive.SelectProps {
+  items: SelectItem[];
+  placeholder: string;
+  className?: string;
+}
+
+const Select = ({ items, placeholder, className, ...props }: SelectProps) => {
+  return (
+    <SelectRoot {...props}>
+      <SelectTrigger className={className}>
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        <RecursiveSelectItems items={items} />
+      </SelectContent>
+    </SelectRoot>
+  );
+};
+
+const RecursiveSelectItems = ({ items }: { items: SelectItem[] }) => {
+  let previousWasGroup = false;
+
+  return (
+    <>
+      {items.map((item, index) => {
+        const isGroup = Boolean(item.items);
+        const renderSeparator = !isGroup && index > 0 && previousWasGroup;
+
+        previousWasGroup = isGroup;
+
+        return (
+          <React.Fragment key={item.value}>
+            {renderSeparator && <SelectSeparator />}
+            {isGroup ? (
+              <SelectGroup>
+                {index > 0 && <SelectSeparator />}
+                <SelectLabel>{item.label}</SelectLabel>
+                <RecursiveSelectItems items={item.items!} />
+              </SelectGroup>
+            ) : (
+              <SelectItem
+                value={item.value ? item.value : ""}
+                disabled={item.disabled}
+              >
+                {item.label}
+              </SelectItem>
+            )}
+          </React.Fragment>
+        );
+      })}
+    </>
+  );
+};
 
 const SelectRoot = SelectPrimitive.Root;
 
@@ -146,6 +206,7 @@ const SelectSeparator = React.forwardRef<
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export {
+  Select,
   SelectRoot,
   SelectGroup,
   SelectValue,
