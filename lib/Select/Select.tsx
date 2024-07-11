@@ -4,15 +4,15 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-interface SelectItem {
+interface SelectItemType {
   value?: string;
   label: string;
-  items?: SelectItem[];
+  items?: SelectItemType[];
   disabled?: boolean;
 }
 
 interface SelectProps extends SelectPrimitive.SelectProps {
-  items: SelectItem[];
+  items: SelectItemType[];
   placeholder: string;
   className?: string;
 }
@@ -30,7 +30,7 @@ const Select = ({ items, placeholder, className, ...props }: SelectProps) => {
   );
 };
 
-const RecursiveSelectItems = ({ items }: { items: SelectItem[] }) => {
+const RecursiveSelectItems = ({ items }: { items: SelectItemType[] }) => {
   let previousWasGroup = false;
 
   return (
@@ -207,6 +207,7 @@ SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
 export {
   Select,
+  type SelectItemType,
   SelectRoot,
   SelectGroup,
   SelectValue,

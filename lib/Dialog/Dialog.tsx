@@ -14,7 +14,7 @@ interface DialogProps {
 const Dialog = ({ trigger, title, description, children }: DialogProps) => {
   return (
     <DialogRoot>
-      <DialogTrigger>{trigger}</DialogTrigger>
+      <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>

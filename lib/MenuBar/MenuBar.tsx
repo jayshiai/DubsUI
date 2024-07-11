@@ -22,7 +22,7 @@ interface MenubarProps {
 }
 const Menubar = ({ className, triggers, ...props }: MenubarProps) => {
   return (
-    <MenubarRoot {...props}>
+    <MenubarRoot className={className} {...props}>
       {triggers?.map((trigger, index) => (
         <MenubarMenu key={index}>
           <MenubarTrigger>{trigger.trigger}</MenubarTrigger>

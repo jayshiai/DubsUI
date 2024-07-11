@@ -6,32 +6,34 @@ import { VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { toggleVariants } from "../Toggle";
 
-interface ToggleGroupProps {
-  type: "single" | "multiple";
-  children: React.ReactNode;
-}
-const ToggleGroup = ({ type, children, ...props }: ToggleGroupProps) => {
+const ToggleGroup = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupRoot>,
+  React.ComponentPropsWithoutRef<typeof ToggleGroupRoot> &
+    VariantProps<typeof toggleVariants>
+>(({ children, ...props }, ref) => {
   // Ensure that children are of type ReactElement and have a value prop
   const toggleItems = React.Children.map(children, (child) => {
     if (typeof child === "string") {
       return <ToggleGroupItem value={child}>{child}</ToggleGroupItem>;
     } else if (React.isValidElement(child)) {
-      const { value } = child.props;
+      const { "data-value": value, children: childChildren } = child.props;
+      const innerText =
+        typeof childChildren === "string"
+          ? childChildren
+          : childChildren?.toString() || "";
       return (
-        <ToggleGroupItem value={value} asChild>
-          {child}
-        </ToggleGroupItem>
+        <ToggleGroupItem value={value || innerText}>{child}</ToggleGroupItem>
       );
     }
     return null;
   });
 
   return (
-    <ToggleGroupRoot type={type} {...props}>
+    <ToggleGroupRoot ref={ref} {...props}>
       {toggleItems}
     </ToggleGroupRoot>
   );
-};
+});
 
 const ToggleGroupContext = React.createContext<
   VariantProps<typeof toggleVariants>

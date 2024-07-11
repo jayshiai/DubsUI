@@ -1,6 +1,6 @@
 "use client";
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import React, { useState } from "react";
+import React from "react";
 import { ChevronsUpDown } from "lucide-react";
 import { Button } from "../Button/Button";
 
@@ -10,18 +10,13 @@ interface CollapsibleProps {
   show?: number;
 }
 const Collapsible = ({ children, title, show }: CollapsibleProps) => {
-  const [isOpen, setIsOpen] = useState(false);
   const childrenArray = React.Children.toArray(children);
   const visibleChildren = show ? childrenArray.slice(0, show) : [];
   const hiddenChildren = show ? childrenArray.slice(show) : childrenArray;
 
   return (
-    <CollapsibleRoot
-      open={isOpen}
-      onOpenChange={setIsOpen}
-      className="w-[350px] space-y-2 dark:text-white"
-    >
-      <div className="flex items-center justify-between space-x-4 px-4">
+    <CollapsibleRoot className="w-[350px] space-y-2 dark:text-white">
+      <div className="flex items-center justify-between space-x-4">
         {title}
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm" className="w-9 h-9 p-0">

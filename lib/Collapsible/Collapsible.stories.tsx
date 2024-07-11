@@ -11,7 +11,7 @@ export default { title: "DubsUI/Collapsible" };
 
 export const Primary = () => {
   const title = (
-    <div className="w-full h-10 bg-black text-white rounded-2xl flex justify-center items-center">
+    <div className="w-full h-10 border rounded-lg flex justify-center items-center">
       Collapsible
     </div>
   );
@@ -31,15 +31,9 @@ export const Primary = () => {
 };
 
 export const Fancy = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
   return (
     <div className="dark  bg-black h-[calc(100vh-2rem)]   flex justify-center items-center">
-      <CollapsibleRoot
-        open={isOpen}
-        onOpenChange={setIsOpen}
-        className="w-[350px] space-y-2 dark:text-white"
-      >
+      <CollapsibleRoot className="w-[350px] space-y-2 dark:text-white">
         <div className="flex items-center justify-between space-x-4 px-4">
           <h4 className="text-sm font-semibold">
             @peduarte starred 3 repositories

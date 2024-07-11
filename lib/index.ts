@@ -102,7 +102,7 @@ export {
 } from "./DropDownMenu"
 
 //HoverCard
-export { HoverCard, HoverCardTrigger, HoverCardContent } from "./HoverCard"
+export { HoverCard, HoverCardRoot, HoverCardTrigger, HoverCardContent } from "./HoverCard"
 
 //MenuBar
 export {
@@ -151,6 +151,8 @@ export { ScrollArea, ScrollBar } from "./ScrollArea"
 
 //Select
 export {
+    Select,
+    type SelectItemType,
     SelectRoot,
     SelectGroup,
     SelectValue,

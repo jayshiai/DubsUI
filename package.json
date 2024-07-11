@@ -2,7 +2,7 @@
   "name": "@jayshiai/dubsui",
   "author": "jayshiai",
   "private": false,
-  "version": "0.4.5",
+  "version": "0.5.3",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,6 +14,10 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts",
       "styles": "./dist/assets/index.css"
+    },
+    "./Extras": {
+      "import": "./dist/Extras/index.js",
+      "types": "./dist/Extras/index.d.ts"
     },
     "./css": "./dist/assets/index.css"
   },
@@ -103,6 +107,9 @@
     "access": "public"
   },
   "dependencies": {
-    "postcss-prefix-selector": "^1.16.1"
+    "@react-three/drei": "^9.108.3",
+    "postcss-prefix-selector": "^1.16.1",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.166.1"
   }
 }

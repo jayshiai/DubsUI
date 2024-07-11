@@ -1,4 +1,6 @@
 export {
+    Select,
+    type SelectItemType,
     SelectRoot,
     SelectGroup,
     SelectValue,

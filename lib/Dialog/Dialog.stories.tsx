@@ -28,6 +28,9 @@ export const Primary = () => {
             account and remove your data from our servers.
           </DialogDescription>
         </DialogHeader>
+        <div className="w-full h-[100px] border rounded-md p-4 font-mono font-thin">
+          Reason?
+        </div>
         <DialogFooter>
           <Button type="submit">Save changes</Button>
           <Button variant={"outline"}>Cancle</Button>
