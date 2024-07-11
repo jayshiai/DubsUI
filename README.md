@@ -68,9 +68,13 @@
 ### Built With
 
 - [![Next][Next.js]][Next-url]
+- [![TypeScript][TypeScript]][TypeScript-url]
+- [![Vite][Vite]][Vite-url]
+- [![React][React.js]][React-url]
 - [![React][React.js]][React-url]
 - [![TailwindCSS][Tailwind]][Tailwind-url]
 - [![Storybook][Storybook]][Storybook-url]
+- [![RadixUI][RadixUI]][RadixUI-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -200,7 +204,13 @@ Project Link: [https://github.com/jayshiai/dubsui](https://github.com/jayshiai/d
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Vite]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[TypeScript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
 [Tailwind]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
+[RadixUI]: https://img.shields.io/badge/Radix_UI-161618?style=for-the-badge&logo=radixui&logoColor=white
+[RadixUI-url]: https://www.radix-ui.com/
 [Storybook]: https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white
 [Storybook-url]: https://storybook.js.org/
