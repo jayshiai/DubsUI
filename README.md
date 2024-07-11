@@ -200,7 +200,7 @@ Project Link: [https://github.com/jayshiai/dubsui](https://github.com/jayshiai/d
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Tailwind]: https://img.shields.io/badge/tailwindcss?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4
+[Tailwind]: https://img.shields.io/badge/Tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4
 [Tailwind-url]: https://tailwindcss.com/
-[Storybook]: https://img.shields.io/badge/storybook?style=for-the-badge&logo=storybook&logoColor=FF4785
+[Storybook]: https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=FF4785
 [Storybook-url]: https://storybook.js.org/
