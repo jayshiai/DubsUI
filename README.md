@@ -67,10 +67,9 @@
 
 ### Built With
 
-[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
 [![TypeScript][TypeScript]][TypeScript-url]
 [![Vite][Vite]][Vite-url]
-[![React][React.js]][React-url]
 [![TailwindCSS][Tailwind]][Tailwind-url]
 [![Storybook][Storybook]][Storybook-url]
 [![RadixUI][RadixUI]][RadixUI-url]
