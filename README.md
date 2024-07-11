@@ -67,14 +67,14 @@
 
 ### Built With
 
-- [![Next][Next.js]][Next-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-- [![Vite][Vite]][Vite-url]
-- [![React][React.js]][React-url]
-- [![React][React.js]][React-url]
-- [![TailwindCSS][Tailwind]][Tailwind-url]
-- [![Storybook][Storybook]][Storybook-url]
-- [![RadixUI][RadixUI]][RadixUI-url]
+[![Next][Next.js]][Next-url]
+[![TypeScript][TypeScript]][TypeScript-url]
+[![Vite][Vite]][Vite-url]
+[![React][React.js]][React-url]
+[![TailwindCSS][Tailwind]][Tailwind-url]
+[![Storybook][Storybook]][Storybook-url]
+[![RadixUI][RadixUI]][RadixUI-url]
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
