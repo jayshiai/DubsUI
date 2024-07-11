@@ -119,7 +119,7 @@ export const Accord = () => {
 };
 ```
 
-_For more examples, please refer to the [Documentation](ui.3dubs.in)_
+_For more examples, please refer to the [Documentation](https://ui.3dubs.in)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
