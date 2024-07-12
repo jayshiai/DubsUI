@@ -196,7 +196,7 @@ Project Link: [https://github.com/jayshiai/dubsui](https://github.com/jayshiai/d
 [issues-url]: https://github.com/jayshiai/dubsui/issues
 [license-shield]: https://img.shields.io/github/license/jayshiai/dubsui.svg?style=plastic
 [license-url]: https://github.com/jayshiai/dubsui/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jayvardhan-patil-419b9926b/
 [product-screenshot]: public/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
