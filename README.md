@@ -186,15 +186,15 @@ Project Link: [https://github.com/jayshiai/dubsui](https://github.com/jayshiai/d
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/jayshiai/dubsui?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/jayshiai/dubsui?style=plastic
 [contributors-url]: https://github.com/jayshiai/dubsui/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jayshiai/dubsui?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/jayshiai/dubsui?style=plastic
 [forks-url]: https://github.com/jayshiai/dubsui/network/members
-[stars-shield]: https://img.shields.io/github/stars/jayshiai/dubsui.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/jayshiai/dubsui.svg?style=plastic
 [stars-url]: https://github.com/jayshiai/dubsui/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jayshiai/dubsui.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/jayshiai/dubsui.svg?style=plastic
 [issues-url]: https://github.com/jayshiai/dubsui/issues
-[license-shield]: https://img.shields.io/github/license/jayshiai/dubsui.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/jayshiai/dubsui.svg?style=plastic
 [license-url]: https://github.com/jayshiai/dubsui/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jayvardhan-patil-419b9926b/
